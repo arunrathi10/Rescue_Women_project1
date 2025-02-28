@@ -2196,7 +2196,7 @@ nav {
     height: 50vh;
     position: relative; /* Establish a context for absolute positioning */
     overflow: hidden; /* Prevent elements from spilling out */
-    background-image: url("/img/contact_img1.png");
+    background-image: url('/img/contact_img1.png');
     background-size: cover; /* Ensure the image covers the entire section */
     background-position: center;
 }
