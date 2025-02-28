@@ -1,0 +1,3751 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    height: 80px;
+    margin-left: 150px;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Align items to the center of the header */
+    gap: 45px;
+    padding: 0 20px; /* Remove default padding for the menu */
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #9605C6;
+    font-size: 16px; /* Converted from 1rem */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+}
+
+.menu a:hover {
+    color: #9605C6;
+}
+
+.menu li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #9605C6;
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    header {
+        padding: 10px;
+    }
+    .logo {
+        margin-left: 50px;
+    }
+    .menu {
+        gap: 30px;
+    }
+    .menu a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        margin-top: 10px;
+    }
+    .menu {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack header elements vertically */
+        align-items: flex-start; /* Align items to the left */
+        height: auto; /* Allow dynamic height */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .logo-container {
+        width: 100%; /* Make logo take the full width */
+        display: flex;
+        justify-content: center; /* Center the logo */
+        margin-bottom: 10px; /* Add spacing below the logo */
+    }
+
+    .logo {
+        height: 60px; /* Adjust logo size */
+    }
+
+    nav {
+        width: 100%; /* Ensure nav takes full width */
+    }
+
+    .menu {
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 10px; /* Add spacing between menu items */
+        width: 100%; /* Take full width */
+        align-items: flex-start; /* Align menu items to the left */
+        padding-left: 20px; /* Add left padding for menu items */
+    }
+
+    .menu li {
+        display: flex; /* Ensure flexbox is applied */
+        justify-content: center; /* Center horizontally */
+        width: 100%; /* Allow centering within available width */
+    }
+
+    .menu a {
+        font-size: 14px; /* Adjust font size */
+        text-align: center; /* Center text in links */
+    }
+}
+
+
+
+
+/* INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX*/
+
+/* Masthead Section */
+.masthead {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 65vh;
+    background-image: url('../img/masthead.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+}
+
+.masthead::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    width: 25%;
+    margin-left: 11%;
+}
+
+.content h1 {
+    font-size: 2.9rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    border-left: 5px solid white;
+    padding-left: 15px;
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    font-size: 1rem;
+    color: black;
+    background-color: #D9D9D9;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+@media (max-width: 1200px) {
+    .masthead {
+        height: 60vh; /* Adjust height for smaller screens */
+    }
+    .content {
+        width: 30%; /* Increase width for better readability */
+        margin-left: 10%;
+    }
+    .content h1 {
+        font-size: 2.5rem; /* Scale down heading size */
+    }
+    .content p {
+        font-size: 1.1rem; /* Adjust paragraph font size */
+    }
+    .btn {
+        margin-left: 15%; /* Reduce margin for button */
+    }
+}
+
+/* For screens 992px and smaller */
+@media (max-width: 992px) {
+    .masthead {
+        flex-direction: column; /* Stack content vertically */
+        height: 40vh; /* Allow dynamic height */
+        padding: 20px; /* Add padding for spacing */
+    }
+    .content {
+        width: 80%; /* Make content wider for smaller screens */
+        margin: 0 auto; /* Center content horizontally */
+    }
+    .content h1 {
+        font-size: 2.2rem; /* Reduce heading size */
+        text-align: center; /* Center-align heading */
+    }
+    .content p {
+        font-size: 1rem; /* Adjust paragraph font size */
+        text-align: center; /* Center-align paragraph */
+        margin-left: 0; /* Remove left margin */
+    }
+    .btn {
+        width: 50%;
+        text-align: center;
+        display: block; /* Ensure block display for centering */
+    }
+}
+
+/* For screens 768px and smaller */
+@media (max-width: 768px) {
+    .masthead {
+        height: 40vh; /* Allow dynamic height */
+        padding: 15px; /* Add padding for spacing */
+    }
+    .content {
+        width: 90%; /* Use almost full width */
+        text-align: center; /* Center-align all content */
+        margin: 0 auto; /* Center horizontally */
+    }
+    .content h1 {
+        font-size: 1.8rem; /* Scale down heading size */
+    }
+    .content p {
+        font-size: 0.9rem; /* Adjust paragraph font size */
+    }
+    .btn {
+        font-size: 0.9rem; /* Adjust font size for the button */
+    }
+}
+
+
+
+
+.section1{
+    height: 560px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 450px;
+}
+
+.images {
+    position: relative;
+    margin-top: 1%;
+}
+
+.images img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.images img:nth-child(2) {
+    position: absolute;
+    top: 175px;
+    left: 145px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 330px;
+}
+
+.purplebox1{
+    height: 60px;
+    width: 70px;
+    background-color: #9605C6;
+    margin-left: 55px;
+    margin-top: -80px;
+
+}
+
+.purplebox2{
+    height: 60px;
+    width: 70px;
+    background-color: #9605C6;
+    margin-left: -280px;
+    margin-top: 200px;
+    position: absolute;
+}
+
+.text-content {
+    margin-left: 25%;
+}
+
+.text-content h2 {
+    color: #9605C6;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.text-content p {
+    line-height: 1.6;
+    color: #555;
+}
+@media (max-width: 1400px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .text-content {
+        margin-left: 40%; /* Reset left margin */
+        margin-top: 20px; /* Add spacing below the masthead */
+        text-align: left; /* Keep text alignment consistent */
+        width: 100%; /* Ensure it occupies available space */
+
+    }
+
+    .text-content h2 {
+        font-size: 28px; /* Adjust heading size for smaller screens */
+    }
+
+    .text-content p {
+        font-size: 16px; /* Ensure paragraph size remains readable */
+        line-height: 1.5; /* Improve readability */
+    }
+
+    .images img:nth-child(2) {
+        width: 300px; /* Scale down second image */
+        top: 150px;
+        left: 120px;
+    }
+}
+
+/* For screens 992px and smaller */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column; /* Stack images and text vertically */
+        align-items: center;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .purplebox1,
+    .purplebox2 {
+        display: none; /* Hide purple boxes */
+    }
+
+    .text-content {
+        margin-left: 0;
+        text-align: center; /* Center-align text for smaller screens */
+    }
+
+    .images img {
+        width: 250px; /* Scale down images */
+    }
+
+    .images img:nth-child(2) {
+        width: 250px; /* Ensure consistent size */
+        position: relative;
+        margin-top: 20px; /* Add spacing below the first image */
+        top: 0; /* Reset top position */
+        left: 0; /* Reset left position */
+    }
+}
+
+/* For screens 768px and smaller */
+@media (max-width: 768px) {
+    .section1 {
+        height: auto; /* Allow height to adjust dynamically */
+    }
+
+    .purplebox1,
+    .purplebox2 {
+        display: none; /* Hide purple boxes */
+    }
+
+    .container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .text-content {
+        width: 95%; /* Reduce text width */
+        text-align: center;
+    }
+
+    .text-content h2 {
+        font-size: 26px; /* Adjust heading size */
+    }
+
+    .text-content p {
+        font-size: 16px; /* Adjust paragraph font size */
+    }
+
+    .images img {
+        width: 220px; /* Scale down images further */
+    }
+
+    .images img:nth-child(2) {
+        width: 220px;
+        margin-top: 15px; /* Add spacing between the two images */
+    }
+}
+
+/* For screens 576px and smaller */
+@media (max-width: 576px) {
+    .container {
+        flex-direction: column; /* Stack everything vertically */
+    }
+
+    .text-content h2 {
+        font-size: 22px; /* Reduce heading size further */
+    }
+
+    .text-content p {
+        font-size: 14px; /* Adjust paragraph font size */
+    }
+
+    .images img {
+        width: 200px; /* Scale down images */
+    }
+
+    .images img:nth-child(2) {
+        width: 200px;
+        margin-top: 10px; /* Ensure proper spacing */
+    }
+}
+
+
+
+
+
+
+
+
+.ripple-effect {
+    padding: 50px 20px;
+}
+
+.content1{
+    text-align: center;
+}
+
+.content2{
+    display: inline-block;
+    width: 64.5%;
+    margin: 0 18%;
+}
+
+.content1 h2{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: -15px;
+    color: #9605C6;
+}
+
+.content1 h3 {
+    color: #9605C6;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.content2 p {
+    line-height: 1.2;
+    color: #333333;
+}
+
+
+/* For screens 768px and smaller */
+@media (max-width: 768px) {
+    .ripple-effect {
+        padding: 30px 10px; /* Further reduce padding */
+    }
+
+    .content2 {
+        width: 90%; /* Occupy most of the width */
+        margin: 0 5%; /* Center the content */
+    }
+
+    .content1 {
+        text-align: center; /* Align text to the left for smaller screens */
+        padding: 0 10px; /* Add padding for proper alignment */
+    }
+}
+
+
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin: 1px auto;
+    max-width: 1100px;
+}
+
+.image-gallery div {
+    flex: 1;
+    text-align: center;
+}
+
+.image-gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+    .image-gallery {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align images */
+    }
+
+    .image-gallery div {
+        width: 100%; /* Allow divs to take full width */
+    }
+
+    .image-gallery img {
+        max-width: 90%; /* Reduce image width for smaller screens */
+    }
+}
+
+
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 450px;
+}
+
+.images2 {
+    position: relative;
+    margin-top: 1%;
+}
+
+.images2 img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.images2 img:nth-child(2) {
+    position: absolute;
+    top: 175px;
+    left: 145px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 330px;
+}
+
+.purplebox3{
+    height: 60px;
+    width: 70px;
+    background-color: #9605C6;
+    margin-left: 55px;
+    margin-top: -80px;
+
+}
+
+.purplebox4{
+    height: 60px;
+    width: 70px;
+    background-color: #9605C6;
+    margin-left: -265px;
+    margin-top: 200px;
+    position: absolute;
+}
+
+.text-content2 {
+    width: 50%;
+    margin-right: 8%; /* Add a gap */
+    margin-top: 8%;
+}
+
+.text-content2 h2 {
+    color: #9605C6;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.text-content2 h3{
+    color: #9605C6;
+    margin-top: -5px;
+}
+
+.text-content2 p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.btn2 {
+    display: inline-block;
+    padding: 13px 25px;
+    font-size: 1rem;
+    color: #F9CC10;
+    background-color: #9605C6;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn2:hover {
+    background-color: #bc0ff6;
+    color: #ffdf5e;
+}
+/* For screens 992px and smaller */
+@media (max-width: 1200px) {
+    .container2 {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+    }
+
+    .images2 img:nth-child(2) {
+        position: relative; /* Reset positioning */
+        top: 0; /* Reset top */
+        left: 0; /* Reset left */
+        margin-top: 15px; /* Add spacing between images */
+        width: 280px; /* Adjust width */
+    }
+
+    .purplebox3,
+    .purplebox4 {
+        display: none; /* Hide purple boxes */
+    }
+
+    .text-content2 {
+        width: 80%; /* Make text content more responsive */
+        margin-right: 0;
+        text-align: center; /* Center-align text */
+    }
+
+    .text-content2 h2 {
+        font-size: 32px; /* Adjust heading size */
+    }
+}
+
+/* For screens 768px and smaller */
+@media (max-width: 768px) {
+    .container2 {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 40%;
+    }
+
+    .images2{
+        text-align: center;
+    }
+
+    .images2 img {
+        width: 75%; /* Set images to occupy equal width */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 5px; /* Keep border radius */
+    }
+
+    .images2 img:nth-child(2) {
+        width: 75%;
+    }
+
+    .text-content2 {
+        width: 95%; /* Allow text content to take full width */
+        text-align: center;
+    }
+
+    .text-content2 h2 {
+        font-size: 28px; /* Further reduce heading size */
+    }
+
+    .text-content2 p {
+        font-size: 14px; /* Adjust paragraph font size */
+    }
+}
+
+/* For screens 576px and smaller */
+@media (max-width: 576px) {
+    .container2 {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 42%;
+    }
+
+    .images2{
+        text-align: center;
+    }
+
+    .images2 img {
+        margin-top: 1%;
+        width: 75%; /* Set images to occupy equal width */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 5px; /* Keep border radius */
+    }
+
+    .images2 img:nth-child(2) {
+        width: 75%;
+    }
+
+    .text-content2 {
+        width: 95%; /* Allow text content to take full width */
+        text-align: center;
+    }
+
+    .text-content2 h2 {
+        font-size: 28px; /* Further reduce heading size */
+    }
+
+    .text-content2 p {
+        font-size: 14px; /* Adjust paragraph font size */
+    }
+}
+
+
+
+
+.Testimonials {
+    padding: 50px 20px;
+}
+
+.Testimonials-content{
+    text-align: center;
+}
+
+.Testimonials-content2{
+    display: inline-block;
+    width: 54.5%;
+    margin: 0 22%;
+}
+
+.Testimonials-content h2{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: -15px;
+    color: #9605C6;
+    margin-left: -12%;
+}
+
+.Testimonials-content h3 {
+    color: #9605C6;
+    font-weight: bold;
+    font-size: 19px;
+    margin-bottom: 20px;
+    margin-left: -12%;
+
+}
+
+.Testimonials-content2 p {
+    line-height: 1.2;
+    color: #333333;
+    word-spacing: 2px;
+}
+@media (max-width: 768px) {
+    .Testimonials {
+        padding: 30px 15px; /* Adjust padding for smaller screens */
+        margin-top: 45%;
+    }
+
+    .Testimonials-content2 {
+        width: 90%; /* Make content take up more space */
+        margin: 0 auto; /* Center the content */
+    }
+
+    .Testimonials-content h2 {
+        font-size: 24px; /* Reduce font size for smaller screens */
+        margin-left: 0; /* Reset left margin */
+        text-align: center; /* Center-align text */
+    }
+
+    .Testimonials-content h3 {
+        font-size: 16px; /* Reduce font size for smaller screens */
+        margin-left: 0; /* Reset left margin */
+        text-align: center; /* Center-align text */
+    }
+
+    .Testimonials-content2 p {
+        font-size: 14px; /* Adjust paragraph font size */
+        line-height: 1.5; /* Improve readability */
+        word-spacing: 1px; /* Adjust spacing */
+        text-align: center; /* Center-align text */
+    }
+}
+
+
+
+
+
+.back_color {
+    background-color: #F9CC10;
+    height: 300px;
+    width: 55%;
+    margin: auto;
+    position: relative; /* Set position for z-index stacking */
+    z-index: 1; /* Ensure it's below the cards */
+}
+
+.review_div {
+    position: relative; /* Container for stacking */
+}
+
+.review-cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Space between the cards */
+    position: absolute; /* Position on top of the back_color */
+    top: 50%; /* Adjust vertical position */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the cards on the back_color */
+    z-index: 2; /* Ensure it's above the back_color */
+    width: 80%; /* Optional: Adjust width to align with back_color */
+}
+
+.review-card {
+    background-color: #9605C6;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    max-width: 250px;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.review-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.review-name {
+    color: #F9CC10;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.review-text {
+    color: white;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-left: 55px;
+}
+@media (max-width: 992px) {
+    .back_color {
+        height: 250px; /* Reduce background height */
+        width: 70%; /* Adjust background width */
+    }
+
+    .review-cards {
+        gap: 30px; /* Reduce space between cards */
+        width: 90%; /* Adjust cards container width */
+    }
+
+    .review-card {
+        max-width: 220px; /* Reduce card width */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .review-header {
+        gap: 20px; /* Reduce gap between avatar and name */
+    }
+
+    .review-avatar {
+        width: 50px;
+        height: 50px; /* Reduce avatar size */
+    }
+
+    .review-name {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .review-text {
+        font-size: 0.85rem; /* Adjust text size */
+        margin-left: 40px; /* Reduce left margin */
+    }
+}
+
+/* For screens 768px and smaller */
+@media (max-width: 768px) {
+    .back_color {
+        height: 200px; /* Further reduce background height */
+        width: 90%; /* Make background almost full width */
+        margin-top: 15%;
+        margin-bottom: 20%;
+    }
+
+    .review-cards {
+        flex-direction: column; /* Stack cards vertically */
+        gap: 20px; /* Reduce gap between cards */
+        width: 100%; /* Full width for cards container */
+    }
+
+    .review-card {
+        max-width: 100%; /* Make cards full width */
+        margin: 0 auto; /* Center cards */
+    }
+
+    .review-header {
+        gap: 15px; /* Further reduce gap */
+    }
+
+    .review-avatar {
+        width: 40px;
+        height: 40px; /* Reduce avatar size */
+    }
+
+    .review-name {
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    .review-text {
+        font-size: 0.8rem; /* Adjust text size */
+        margin-left: 20px; /* Reduce left margin */
+    }
+}
+
+/* For screens 576px and smaller */
+@media (max-width: 576px) {
+    .back_color {
+        height: 150px; /* Further reduce background height */
+        width: 100%; /* Use full width */
+        margin-top: 20%;
+        margin-bottom: 30%;
+    }
+
+    .review-cards {
+        gap: 15px; /* Reduce gap further */
+    }
+
+    .review-card {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .review-header {
+        flex-direction: column; /* Stack avatar and name */
+        align-items: center; /* Center align */
+        gap: 10px; /* Add gap between avatar and name */
+    }
+
+    .review-avatar {
+        width: 30px;
+        height: 30px; /* Further reduce avatar size */
+    }
+
+    .review-name {
+        font-size: 0.85rem; /* Adjust font size */
+    }
+
+    .review-text {
+        font-size: 0.75rem; /* Further adjust text size */
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center-align text */
+    }
+}
+
+
+
+
+/*  ABOUT_US ABOUT_US ABOUT_US ABOUT_US ABOUT_US ABOUT_US ABOUT_US ABOUT_US ABOUT_US ABOUT_US ABOUT_US ABOUT_US*/
+/* Existing Styles */
+.about_masthead {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text to the left */
+    padding: 50px;
+    height: 65vh;
+    background-color: #560309; /* Deep red background color */
+    position: relative; /* Establish a context for absolute positioning */
+    overflow: hidden; /* Prevent elements from spilling out */
+    background-image: url("/img/huge img 1.png");
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center;
+}
+
+.about_masthead::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(36, 1, 4, 0.8); /* Add a brown overlay with 80% opacity */
+    z-index: 1; /* Ensure it is above the background but below the content */
+}
+
+.about_mast_div {
+    flex: 1; /* Take up as much space as needed */
+    z-index: 2; /* Ensure it stays above the overlay */
+    color: #716d6d; /* Light gray text color for readability */
+    margin-left: 40px;
+}
+
+.about_mast_div h1 {
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin-top: -220px;
+}
+
+.about_mast_div p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.over_top {
+    position: absolute; /* Overlay it on top of the masthead */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the image horizontally */
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Ensure it is above the overlay */
+    opacity: 1; /* Add slight transparency */
+}
+
+.over_top img {
+    width: 100%; /* Ensure the image spans the width */
+    height: 100%; /* Stretch to cover the height */
+    object-fit: cover; /* Maintain the aspect ratio */
+    filter: brightness(100%);
+}
+
+/* Responsive Design */
+
+/* Hide the over_top image on smaller screens */
+@media (max-width: 768px) {
+    .over_top {
+        display: none; /* Completely hide the over_top image */
+    }
+
+    .about_mast_div {
+        margin-left: 20px; /* Adjust spacing for smaller screens */
+        text-align: center; /* Center align text */
+    }
+
+    .about_mast_div h1 {
+        font-size: 2.5rem; /* Reduce font size */
+        margin-top: 0; /* Remove negative margin */
+    }
+
+    .about_mast_div p {
+    }
+
+    .about_masthead {
+        height: 40vh; /* Let height adjust dynamically */
+    }
+}
+
+
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 30px;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 400px; /* Control image size */
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-container {
+    flex: 1;
+    max-width: 600px; /* Limit text width for readability */
+    color: #600000; /* Dark red color for text */
+}
+
+.text-container h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-container h2 {
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #600000; /* Slightly darker red for emphasis */
+}
+
+.text-container h3 {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .image-container img {
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .text-container {
+        max-width: 100%;
+    }
+}
+
+
+/* Section styling */
+.mission-section {
+    padding: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mission-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    max-width: 1200px;
+    gap: 20px;
+}
+
+/* Text content styling */
+.about_text-content {
+    flex: 1;
+    max-width: 600px;
+    margin-left: -1px;
+}
+
+.about_text-content h2 {
+    font-size: 4rem;
+    color: #600000; /* Dark red for the heading */
+    margin-bottom: 20px;
+}
+
+.about_text-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333; /* Dark gray for text */
+}
+
+/* Image content styling */
+.image-content img {
+    width: 250px;
+    height: 350px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Overlapping effect for images */
+.image-content img:nth-child(2) {
+    position: relative;
+    top: 80px; /* Adjust vertical position */
+    left: -20px; /* Adjust horizontal overlap */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mission-container {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+        margin-top: -80px;
+    }
+
+    .about_text-content {
+        max-width: 100%;
+    }
+
+    .image-content {
+        justify-content: center; /* Center images */
+    }
+
+    .image-content img {
+        width: 300px; /* Scale down images */
+    }
+
+    .image-content img:nth-child(2) {
+        top: 10px;
+        left: 0; /* Remove overlap for smaller screens */
+    }
+}
+
+
+
+
+/* --- Advocate Section Styles --- */
+.advocate-section {
+    background-color: #F9CC10; /* Bright background similar to your example */
+    padding: 50px;        /* Some top/bottom padding */
+}
+
+/* Container to limit content width and set up flex layout */
+.advocate-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;       /* So it wraps on small screens */
+    gap: 2rem;             /* Space between text and images */
+}
+
+/* --- Text Column --- */
+.text-div {
+    flex: 1 1 300px;
+    color: #5C2E00;         /* Dark brown text color */
+}
+
+.text-div h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #5C2E00;         /* Ensure heading color matches theme */
+    font-weight: 700;
+}
+
+.text-div p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- Images Column --- */
+.images-wrap {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;             /* Space between the two images */
+}
+
+.images-wrap img {
+    width: 50%;
+    border-radius: 1rem;   /* Rounded corners */
+    object-fit: cover;     /* Ensure images don’t distort */
+}
+
+@media (max-width: 768px) {
+    /* Container: stack content in a single column */
+    .advocate-container {
+        flex-direction: column;   /* Stack columns vertically */
+        align-items: center;      /* Center horizontally if desired */
+        text-align: center;       /* Center the text */
+    }
+
+    /* Make .images-wrap stack each image vertically */
+    .images-wrap {
+        display: flex;
+        flex-direction: column;   /* Force images to stack vertically */
+        align-items: center;      /* Center them horizontally */
+        width: 100%;
+        margin-top: -120px;
+    }
+
+    /* Each image is 100% (or a chosen max-width) so they appear one below another */
+    .images-wrap img {
+        width: 100%;              /* Occupy full width within parent */
+        max-width: 400px;         /* Optional: prevent images from getting too large */
+    }
+}
+
+
+
+/* Section styling */
+.mission-section2 {
+    padding: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mission-container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    max-width: 1200px;
+    gap: 20px;
+}
+
+/* Text content styling */
+.text-content3 {
+    flex: 1;
+    max-width: 600px;
+    margin-left: 80px;
+}
+
+.text-content3 h2 {
+    font-size: 4rem;
+    color: #600000; /* Dark red for the heading */
+    margin-bottom: 20px;
+}
+
+.text-content3 p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333; /* Dark gray for text */
+}
+
+/* Image content styling */
+.image-content2 img {
+    width: 250px;
+    height: 350px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Overlapping effect for images */
+.image-content2 img:nth-child(2) {
+    position: relative;
+    top: 80px; /* Adjust vertical position */
+    left: -20px; /* Adjust horizontal overlap */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mission-container2 {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+    }
+
+    .text-content3 {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .image-content2 {
+        justify-content: center; /* Center images */
+    }
+
+    .image-content2 img {
+        width: 300px; /* Scale down images */
+    }
+
+    .image-content2 img:nth-child(2) {
+        top: 10px;
+        left: 0; /* Remove overlap for smaller screens */
+    }
+}
+
+.what_masthead {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text to the left */
+    padding: 50px;
+    height: 65vh;
+    background-color: #560309; /* Deep red background color */
+    position: relative; /* Establish a context for absolute positioning */
+    overflow: hidden; /* Prevent elements from spilling out */
+    background-image: url("/img/what_mast (1).png");
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center;
+}
+
+
+.what_mast_div h1 {
+    color: #F9CC10;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-top: -140px;
+    margin-left: 150px;
+}
+
+.what_mast_div p {
+    color: #FFFFFF;
+    margin-left: 150px;
+    font-size: 30px;
+    margin-top: -20px;
+    line-height: 1.5;
+}
+
+.what_over_top {
+    position: absolute; /* Overlay it on top of the masthead */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the image horizontally */
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Ensure it is above the overlay */
+    opacity: 1; /* Add slight transparency */
+}
+
+.what_over_top img {
+    width: 100%; /* Ensure the image spans the width */
+    height: 100%; /* Stretch to cover the height */
+    object-fit: cover; /* Maintain the aspect ratio */
+    filter: brightness(100%);
+}
+
+.what_btn {
+    display: inline-block;
+    padding: 17px 35px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: #9605C6;
+    margin-left: 32%;
+    margin-top: 4%;
+}
+/* Responsive Design */
+
+/* Hide the over_top image on smaller screens */
+@media (max-width: 768px) {
+    .what_over_top {
+        display: none; /* Completely hide the over_top image */
+    }
+
+    .what_mast_div {
+        margin-left: 20px; /* Adjust spacing for smaller screens */
+    }
+
+    .what_mast_div h1 {
+        font-size: 2.3rem; /* Reduce font size */
+        margin: 0 auto;
+    }
+
+    .what_mast_div p {
+        font-size: 2rem; /* Reduce font size */
+        margin: 15px auto;
+    }
+
+    .what_masthead {
+        height: 40vh; /* Let height adjust dynamically */
+    }
+    .what_btn{
+        margin: 0 auto;
+    }
+}
+
+
+/* --- Services Section Layout --- */
+.services-section {
+    display: flex;
+    flex-wrap: wrap;            /* Wrap on smaller screens */
+    gap: 3.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;          /* Center and give top/bottom space */
+    justify-content: center;    /* Center align the cards in a row */
+}
+
+/* --- Individual Card Styles --- */
+.service-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 330px;           /* Control card width */
+    overflow: hidden;           /* Ensures the card’s border-radius applies to the image top */
+    display: flex;
+    flex-direction: column;
+}
+
+/* The top image container takes care of the rounded corners */
+.what_image-container img {
+    display: block;
+    width: 330px;
+    height: auto;
+    object-fit: cover;          /* For consistent resizing */
+}
+
+/* --- Service Content (Heading + Paragraph) --- */
+.service-content {
+    padding: 1rem;
+}
+
+.service-content h2 {
+    margin-bottom: 0.5rem;
+    color: #9605C6;             /* Purple heading color */
+    font-size: 1.25rem;
+}
+
+.service-content p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #333;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .services-section {
+        flex-direction: column;   /* Stack all cards vertically on small screens */
+        align-items: center;
+    }
+
+    .service-card {
+        max-width: 80%;          /* Card takes full width of container */
+    }
+    .what_image-container img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.partner-section {
+    padding: 50px;        /* Some top/bottom padding */
+}
+
+/* Container to limit content width and set up flex layout */
+.partner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;       /* So it wraps on small screens */
+    gap: 2rem;             /* Space between text and images */
+}
+
+/* --- Text Column --- */
+.partner-text {
+    width: 350px;
+    margin-right: 100px;
+}
+
+.partner-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #9605C6;         /* Ensure heading color matches theme */
+    font-weight: 700;
+}
+
+.partner-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- Images Column --- */
+.partner-images {
+    flex: 1 1 250px;
+    display: flex;
+    gap: 30px;
+}
+
+.partner-images img {
+    width: 40%;
+    border-radius: 1rem;   /* Rounded corners */
+    object-fit: cover;     /* Ensure images don’t distort */
+}
+
+.join-btn {
+    display: inline-block;
+    background-color: #9605C6;   /* Purple background */
+    color: #FFFFFF;                 /* White text */
+    font-weight: 500;
+    text-decoration: none;
+    padding: 15px 45px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.join-btn:hover {
+    background-color: #7a00cc;    /* Darken on hover */
+}
+
+@media (max-width: 768px) {
+    /* Container: stack content in a single column */
+    .partner-container {
+        flex-direction: column;   /* Stack columns vertically */
+        align-items: center;      /* Center horizontally if desired */
+        text-align: center;       /* Center the text */
+    }
+
+    /* Make .images-wrap stack each image vertically */
+    .partner-images {
+        display: flex;
+        flex-direction: column;   /* Force images to stack vertically */
+        align-items: center;      /* Center them horizontally */
+        width: 80%;
+        margin-left: -100px;
+    }
+
+    /* Each image is 100% (or a chosen max-width) so they appear one below another */
+    .partner-images img {
+        width: 100%;              /* Occupy full width within parent */
+        max-width: 400px;         /* Optional: prevent images from getting too large */
+    }
+}
+
+
+
+
+
+.volunteer_masthead {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text to the left */
+    padding: 50px;
+    height: 65vh;
+    position: relative; /* Establish a context for absolute positioning */
+    overflow: hidden; /* Prevent elements from spilling out */
+    background-image: url("/img/volunteer_img2.png");
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: right;
+}
+
+.volunteer_masthead::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(132, 132, 132, 0.7); /* Add a brown overlay with 80% opacity */
+    z-index: 1; /* Ensure it is above the background but below the content */
+}
+
+.volunteer_mast_div {
+    flex: 1; /* Take up as much space as needed */
+    z-index: 2; /* Ensure it stays above the overlay */
+    color: #716d6d; /* Light gray text color for readability */
+    margin-left: 40px;
+}
+
+.volunteer_mast_div h1 {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-top: -70px;
+    margin-left: 120px;
+}
+
+.volunteer_mast_div p {
+    color: white;
+    font-size: 2rem;
+    line-height: 1.4;
+    margin-left: 120px;
+    margin-top: -30px;
+}
+
+.volunteer_over_top {
+    position: absolute; /* Overlay it on top of the masthead */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the image horizontally */
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Ensure it is above the overlay */
+    opacity: 1; /* Add slight transparency */
+}
+
+.volunteer_over_top img {
+    width: 100%; /* Ensure the image spans the width */
+    height: 100%; /* Stretch to cover the height */
+    object-fit: cover; /* Maintain the aspect ratio */
+    filter: brightness(100%);
+}
+
+/* Responsive Design */
+
+/* Hide the over_top image on smaller screens */
+@media (max-width: 768px) {
+    .volunteer_over_top {
+        display: none; /* Completely hide the over_top image */
+    }
+
+    .volunteer_mast_div {
+        margin-left: 20px; /* Adjust spacing for smaller screens */
+    }
+
+    .volunteer_mast_div h1 {
+        font-size: 2rem; /* Reduce font size */
+        margin: 0 auto; /* Remove negative margin */
+    }
+
+    .volunteer_mast_div p {
+        margin: 10px auto; /* Remove negative margin */
+        font-size: 1.6rem;
+    }
+
+    .volunteer_masthead {
+        height: 40vh; /* Let height adjust dynamically */
+    }
+}
+
+
+.volunteer-section {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    gap: 30px;
+}
+
+.volunteer-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.volunteer-image-container img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.volunteer-text-container {
+    width: 350px;
+    margin-right: 20%;
+    margin-top: -100px;
+}
+
+.volunteer-text-container h1 {
+    color: #CC373E; /* Dark red color for text */
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+.volunteer-text-container p{
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .volunteer-text-container {
+        margin-right: 0;
+    }
+    .volunteer-image-container img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .volunteer-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .volunteer-image-container img {
+        width: 85%;
+    }
+
+    .volunteer-text-container {
+        max-width: 100%;
+        margin-right: 0;
+        margin-top: -50px;
+    }
+}
+
+/* Container for heading + paragraph */
+.volunteer-intro {
+    padding: 20px;            /* Add a little horizontal padding on small screens */
+}
+
+/* Heading style */
+.volunteer-intro h2 {
+    font-size: 3.5rem;
+    color: #B5343D;             /* A red color similar to your screenshot */
+    font-weight: 700;
+    margin: 0 32% ;
+}
+
+/* Paragraph style */
+.volunteer-intro p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin: 25px auto;
+    max-width: 670px;           /* Keep paragraphs narrower for readability */
+}
+
+@media (max-width: 768px) {
+    .volunteer-intro {
+        text-align: center;
+    }
+
+    .volunteer-intro h2 {
+        font-size: 2.6rem;
+        color: #B5343D;             /* A red color similar to your screenshot */
+        font-weight: 700;
+    }
+}
+
+
+/* Container for all cards */
+.volunteer-roles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 1200px;        /* Optional: limit the total width */
+    margin: 2rem auto;        /* Center the grid container */
+    padding: 0 1rem;          /* Some horizontal padding */
+    gap:20px 200px;
+}
+
+/* Individual Card Styles */
+.role-card {
+    border: 2px solid #560309;  /* Red border */
+    border-radius: 20px;        /* Rounded corners */
+    padding: 2rem;
+    text-align: center;         /* Center headings and text */
+}
+
+.role-card h2 {
+    color: #CC373E;             /* Same red color as border */
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.role-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container for heading + paragraph */
+.volunteer-intro2 {
+    padding: 20px;            /* Add a little horizontal padding on small screens */
+}
+
+/* Heading style */
+.volunteer-intro2 h2 {
+    font-size: 3rem;
+    color: #CC373E;             /* A red color similar to your screenshot */
+    font-weight: 700;
+    margin: 0 29% ;
+}
+
+/* Paragraph style */
+.volunteer-intro2 p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin: 25px auto;
+    max-width: 770px;           /* Keep paragraphs narrower for readability */
+}
+
+@media (max-width: 768px) {
+    .volunteer-intro2 {
+        text-align: center;
+        width: 91%;
+    }
+
+    .volunteer-intro2 h2 {
+        font-size: 1.9rem;
+        color: #CC373E;             /* A red color similar to your screenshot */
+        font-weight: 700;
+    }
+
+    .volunteer-intro2 p {
+
+        margin: 0;
+    }
+}
+
+
+.volunteer_back_color {
+    background-color: #848484;
+    height: 300px;
+    width: 55%;
+    margin: auto;
+    position: relative; /* Set position for z-index stacking */
+    z-index: 1; /* Ensure it's below the cards */
+    border-radius: 20px;
+}
+
+.volunteer_review_div {
+    position: relative; /* Container for stacking */
+}
+
+.volunteer_review-cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Space between the cards */
+    position: absolute; /* Position on top of the back_color */
+    top: 50%; /* Adjust vertical position */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the cards on the back_color */
+    z-index: 2; /* Ensure it's above the back_color */
+    width: 80%; /* Optional: Adjust width to align with back_color */
+}
+
+.volunteer_review-card {
+    background-color: #CC373E;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    max-width: 250px;
+    border-radius: 20px;
+}
+
+.volunteer_review-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.volunteer_review-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.volunteer_review-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.volunteer_review-text {
+    color: white;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-left: 55px;
+}
+
+/* --- For screens 992px and smaller --- */
+@media (max-width: 992px) {
+    .volunteer_back_color {
+        height: 250px; /* Reduce background height */
+        width: 70%; /* Adjust background width */
+    }
+
+    .volunteer_review-cards {
+        gap: 30px; /* Reduce space between cards */
+        width: 90%; /* Adjust cards container width */
+    }
+
+    .volunteer_review-card {
+        max-width: 220px; /* Reduce card width */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .volunteer_review-header {
+        gap: 20px; /* Reduce gap between avatar and name */
+    }
+
+    .volunteer_review-avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .volunteer_review-name {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .volunteer_review-text {
+        font-size: 0.85rem; /* Adjust text size */
+        margin-left: 40px; /* Reduce left margin */
+    }
+}
+
+/* --- For screens 768px and smaller --- */
+@media (max-width: 768px) {
+    .volunteer_back_color {
+        height: 200px; /* Further reduce background height */
+        width: 90%; /* Make background almost full width */
+        margin-top: 15%;
+        margin-bottom: 20%;
+    }
+
+    .volunteer_review-cards {
+        flex-direction: column; /* Stack cards vertically */
+        gap: 20px; /* Reduce gap between cards */
+        width: 100%; /* Full width for cards container */
+    }
+
+    .volunteer_review-card {
+        max-width: 100%; /* Make cards full width */
+        margin: 0 auto; /* Center the cards */
+    }
+
+    .volunteer_review-header {
+        gap: 15px; /* Further reduce gap */
+    }
+
+    .volunteer_review-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .volunteer_review-name {
+        font-size: 0.9rem;
+    }
+
+    .volunteer_review-text {
+        font-size: 0.8rem;
+        margin-left: 20px;
+    }
+}
+
+/* --- For screens 576px and smaller --- */
+@media (max-width: 576px) {
+    .volunteer_back_color {
+        height: 150px; /* Further reduce background height */
+        width: 100%; /* Use full width */
+        margin: 30% 0;
+    }
+
+    .volunteer_review-cards {
+        gap: 15px; /* Reduce gap further */
+    }
+
+    .volunteer_review-card {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .volunteer_review-header {
+        flex-direction: column; /* Stack avatar and name */
+        align-items: center;    /* Center-align both */
+        gap: 10px;             /* Space between avatar and name */
+    }
+
+    .volunteer_review-avatar {
+        width: 30px;
+        height: 30px;
+    }
+
+    .volunteer_review-name {
+        font-size: 0.85rem;
+    }
+
+    .volunteer_review-text {
+        font-size: 0.75rem;
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center the text */
+    }
+}
+
+
+.contact-section {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 2rem;
+    border: 2px solid #B5343D;    /* Red border */
+    border-radius: 20px;         /* Rounded corners */
+}
+
+/* Wrapper: flex container for left text + right form */
+.contact-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;             /* So it wraps on smaller screens */
+    gap: 2rem;                   /* Spacing between text and form */
+}
+
+/* Left Text */
+.contact-info {
+    flex: 1;
+    min-width: 250px;           /* Ensures it doesn't shrink too small */
+}
+
+.contact-info h2 {
+    font-size: 1.8rem;
+    color: #B5343D;             /* Same red as the border */
+    max-width: 300px;           /* Optional: limit text width */
+}
+
+/* Form Container */
+.contact-form-container {
+    flex: 1;
+    min-width: 340px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Actual Form */
+.contact-form {
+    background-color: #B5343D;   /* Red background for the form */
+    padding: 2rem;
+    border-radius: 20px;         /* Rounded corners */
+    width: 100%;
+    max-width: 350px;            /* Control form’s max size */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Form Fields */
+.contact-form input,
+.contact-form textarea {
+    width: 90%;
+    border-radius: 20px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Optional: Different background for inputs */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #999;
+}
+
+/* Submit Button */
+.contact-form button {
+    align-self: flex-end;        /* Push button to the right within the form */
+    background-color: #F9CC10;   /* Yellow background */
+    color: #9605C6;
+    border: none;
+    border-radius: 20px;
+    padding: 13px 35px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+}
+
+.contact-form button:hover {
+    opacity: 0.9;                /* Slight hover effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;      /* Stack text and form vertically */
+        align-items: flex-start;     /* Left-align or center, your choice */
+    }
+
+    .contact-info,
+    .contact-form-container {
+        width: 100%;
+    }
+
+    .contact-info h2 {
+        margin-bottom: 1rem;        /* Spacing between text and form */
+    }
+
+    .contact-form {
+        align-self: center;         /* Center the form if desired */
+    }
+}
+
+
+.contact_masthead {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text to the left */
+    padding: 50px;
+    height: 50vh;
+    position: relative; /* Establish a context for absolute positioning */
+    overflow: hidden; /* Prevent elements from spilling out */
+    background-image: url("/img/contact_img1.png");
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center;
+}
+
+.contact_masthead h1{
+    color: #560309;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-top: -150px;
+    margin-left: 150px;
+}
+
+.contact_mast_div p {
+    color: #560309;
+    margin-left: 150px;
+    font-size: 30px;
+    margin-top: 10px;
+    line-height: 1.2;
+}
+
+/* Hide the over_top image on smaller screens */
+@media (max-width: 768px) {
+    .contact_mast_div h1 {
+        font-size: 2rem; /* Reduce font size */
+        margin-top: -70px;
+        margin-left: -0px;
+    }
+
+    .contact_mast_div p {
+        font-size: 1.3rem; /* Reduce font size */
+        margin: 10px -10px;
+    }
+
+    .contact_masthead {
+        height: 35vh; /* Let height adjust dynamically */
+    }
+}
+
+/* --- Section Container --- */
+.contact-section {
+    padding: 2rem;
+    max-width: 1200px;     /* Optional: limit overall width */
+    margin: 0 auto;
+    border: none;
+}
+
+/* --- Flex Container for Left (Text) & Right (Image) --- */
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;       /* Wrap columns on smaller screens */
+    gap: 2rem;             /* Space between columns */
+}
+
+/* --- Left Column Styles --- */
+.contact-left {
+    flex: 1;
+    min-width: 280px;      /* Prevent shrinking too narrow */
+    max-width: 440px;      /* Optional: control width of text content */
+}
+
+.contact-left h2 {
+    font-size: 2rem;
+    color: #560309;        /* Dark red heading color */
+    margin-bottom: 1rem;
+}
+
+.contact-left p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Contact Items (Icon + Label) --- */
+.contact-items {
+    display: grid;  /* or flex—whichever you prefer */
+    gap: 1.5rem;
+}
+
+/* Individual Contact Item */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Icon Container */
+.contact-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #560309;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon img {
+    width: 50%;
+    height: auto;
+}
+
+/* Label */
+.contact-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #560309;  /* Same dark red as background or adjust to preference */
+}
+
+/* --- Right Column (Image) --- */
+.contact-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-right img {
+    width: 60%;
+    border-radius: 20px;
+    height: auto;
+}
+
+/* --- Responsive: below 768px, stack columns vertically --- */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center; /* Or center, if you prefer */
+        margin: 0 auto;
+    }
+
+    .contact-container h2{
+       text-align: center;
+    }
+
+    .contact-right {
+        margin-top: 1.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Or center */
+    }
+
+    .contact-items{
+        margin-left: 22%;
+    }
+
+    .contact-left{
+        margin-left: 10%;
+    }
+
+    .contact-right img {
+        max-width: 80%;
+    }
+}
+
+/* --- Additional breakpoint: below 576px --- */
+@media (max-width: 576px) {
+    .contact-left h2 {
+        font-size: 1.6rem;
+    }
+
+    .contact-left p {
+        font-size: 0.95rem;
+    }
+
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .contact-label {
+        font-size: 0.95rem;
+    }
+
+    .contact-right img {
+        margin: 0 auto;
+        width: 80%;   /* Slightly smaller image on very small screens */
+    }
+}
+
+.contact-form-container2 {
+    margin: 4% auto;          /* Places the container in the center horizontally with some top margin */
+    width: 50%;               /* A percentage-based width for responsiveness */
+    max-width: 600px;         /* Prevents it from growing too large on wide screens */
+    padding: 40px;
+    background-color: #560309; /* Burgundy/maroon color */
+    color: #ffffff;           /* White text */
+    border-radius: 15px;      /* Rounded corners */
+    display: block;
+}
+
+/* Center the main heading */
+.contact-form-container2 h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    margin-top: -1rem;
+}
+
+/* Subheading / Intro text */
+.contact-form-container2 p {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    line-height: 1.4;
+}
+
+/* Layout for the two-column area (Name/Company, Phone/Email) */
+.two-column {
+    display: grid;            /* Grid layout */
+    grid-template-columns: 1fr 1fr;
+    gap: 0 4rem;                /* Spacing between columns */
+    margin-bottom: 1rem;
+}
+
+/* Each form field (label + input or label + textarea) */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    text-align: left;         /* Align label and field text to the left, but adjust to your needs */
+}
+
+.form-field label {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    /* Actual "margin" on placeholders isn’t supported;
+       but we can use padding to shift the placeholder text. */
+    padding-left: 10px;
+    color: #aaa; /* Optional placeholder color */
+}
+
+/* Text inputs and textarea styles */
+.form-field input,
+.form-field textarea {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    color: #333;              /* Dark text within input */
+    margin-left: -10px;
+}
+
+/* Maintain consistent heights for text inputs (except textarea) */
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="tel"] {
+    height: 2rem;
+}
+
+/* Allow the textarea to be resized vertically by user (optional) */
+.form-field textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Submit button style */
+.submit-button {
+    display: inline-block;
+    background-color: #F9CC10; /* Yellow button */
+    color: #560309;               /* Black text */
+    border: none;
+    padding: 17px 25px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-left: -7px;
+}
+
+.submit-button:hover {
+    background-color: #e6b223;
+}
+
+
+@media (max-width: 768px) {
+    .contact-form-container2 {
+        width: 90%;          /* Make container fill more of the screen on smaller devices */
+        padding: 20px;       /* Slightly less padding for smaller screens */
+        margin: 2% auto;
+    }
+    .two-column {
+        /* Switch to single-column layout on small screens */
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    /* Remove or reduce negative margins so fields align nicely on small screens */
+    .form-field input,
+    .form-field textarea,
+    .submit-button {
+        margin-left: 0;
+    }
+}
+
+.contact_social-icons{
+    text-align: center;
+}
+
+.contact_social-icons h2{
+    letter-spacing: 1.1px; /* Increase or decrease as needed */
+}
+
+.contact_social-icons img {
+    width: 40px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.contact_social-icons a{
+    text-decoration: none;
+}
+
+
+
+
+
+.event_masthead {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text to the left */
+    padding: 50px;
+    height: 60vh;
+    background-color: #F9CC10; /* Deep red background color */
+    position: relative; /* Establish a context for absolute positioning */
+    overflow: hidden; /* Prevent elements from spilling out */
+    background-image: url("/img/event_img1.png");
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center;
+}
+
+.event_masthead::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(249, 204, 16, 0.5); /* Add a brown overlay with 80% opacity */
+    z-index: 1; /* Ensure it is above the background but below the content */
+}
+
+.event_mast_div {
+    flex: 1; /* Take up as much space as needed */
+    z-index: 2; /* Ensure it stays above the overlay */
+    color: #716d6d; /* Light gray text color for readability */
+}
+
+.event_mast_div h1 {
+    color: #9605C6;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-top: -120px;
+    margin-left: 150px;
+}
+
+.event_mast_div p {
+    color: black;
+    margin-left: 150px;
+    font-size: 30px;
+    margin-top: -30px;
+    line-height: 1.3;
+}
+
+.event_over_top {
+    position: absolute; /* Overlay it on top of the masthead */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the image horizontally */
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Ensure it is above the overlay */
+    opacity: 1; /* Add slight transparency */
+}
+
+.event_over_top img {
+    width: 100%; /* Ensure the image spans the width */
+    height: 100%; /* Stretch to cover the height */
+    object-fit: cover; /* Maintain the aspect ratio */
+    filter: brightness(100%);
+}
+
+/* Hide the over_top image on smaller screens */
+@media (max-width: 768px) {
+    .event_over_top {
+        display: none; /* Completely hide the over_top image */
+    }
+
+    .event_mast_div {
+        margin-left: 20px; /* Adjust spacing for smaller screens */
+    }
+
+    .event_mast_div h1 {
+        font-size: 2.3rem; /* Reduce font size */
+        margin: 0 auto;
+    }
+
+    .event_mast_div p {
+        font-size: 1.3rem; /* Reduce font size */
+        margin: 15px auto;
+    }
+
+    .event_masthead {
+        height: 40vh; /* Let height adjust dynamically */
+    }
+}
+
+/* ---- CONTAINER: TWO-COLUMN LAYOUT ---- */
+.event-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+/* ---- LEFT COLUMN ---- */
+.event-left {
+    flex: 1;
+    text-align: center;   /* Center headings, image, and “Donate” */
+}
+
+/* Titles, subtitles, and info text in left column */
+.event-title {
+    font-size: 2.3rem;
+    color: #9605C6; /* Purple color */
+    margin-bottom: 0.15rem;
+}
+
+.event-subtitle {
+    font-size: 1.1rem;
+    color: #000;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.event-info {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.4;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+
+.event-image {
+    max-width: 60%;
+    height: auto;
+    border-radius: 15px;  /* Rounded corners */
+    margin-bottom: 1rem;
+}
+
+/* ---- RIGHT COLUMN ---- */
+.event-right {
+    flex: 1;
+    text-align: left;  /* Left-align the overview text */
+    margin-top: 120px;
+    margin-left: 100px;
+}
+
+.overview-title {
+    font-size: 1.1rem;
+    color: #000;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.overview-text {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    max-width: 370px;
+}
+
+/* Event detail labels (Date, Time, Location) */
+.event-detail {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+}
+
+/* ---- BUTTONS ---- */
+.event-btn {
+    display: inline-block;
+    padding: 15px 45px;
+    border-radius: 25px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+/* “Donate” button (red background, white text) */
+.donate-btn {
+    background-color: #CC373E;
+    color: #fff;
+}
+
+.donate-btn:hover {
+    background-color: #a51f1f;
+}
+
+/* “Register” button (yellow background, black text) */
+.register-btn {
+    background-color: #F9CC10;
+    color: #CC373E;
+}
+
+.register-btn:hover {
+    background-color: #e6b223;
+}
+
+/* ---- RESPONSIVE (SMALLER SCREENS) ---- */
+@media (max-width: 768px) {
+    .event-section {
+        flex-direction: column; /* Stack columns */
+        align-items: center;
+    }
+    .event-left {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    .event-right {
+        margin-top: 10px;
+    }
+
+}
+
+/* Section Styling */
+.past-events {
+    padding: 40px 20px;
+}
+
+.past-events h2 {
+    color: #CC373E; /* Red color */
+    font-size: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Events Container */
+.events-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Individual Event Styling */
+.event {
+    padding: 15px;
+    width: auto;
+    text-align: center;
+}
+
+.event img {
+    width: 95%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.event h3 {
+    color: #9605C6; /* Purple color */
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.event h4 {
+    color: grey;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .events-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event {
+        width: 90%;
+    }
+}
+
+
+/* Section Styling */
+.partners {
+    padding: 40px 20px;
+}
+
+.partners h2 {
+    color: #CC373E; /* Red color */
+    font-size: 38px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Partners Container */
+.partners-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    margin: auto;
+}
+
+.partner {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner5, .partner4 {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50%;
+}
+
+.partner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.partner4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.partner5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .partners-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 80%;
+    }
+    .partner4 {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .partners-container {
+        grid-template-columns: repeat(1, 1fr);
+        width: 90%;
+    }
+
+}
+
+
+
+.donate_masthead {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text to the left */
+    padding: 50px;
+    height: 60vh;
+    background-color: #F9CC10; /* Deep red background color */
+    position: relative; /* Establish a context for absolute positioning */
+    overflow: hidden; /* Prevent elements from spilling out */
+    background-image: url("/img/donate_img4.png");
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center;
+}
+
+.donate_masthead::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(150, 5, 198, 0.8); /* Add a brown overlay with 80% opacity */
+    z-index: 1; /* Ensure it is above the background but below the content */
+}
+
+.donate_mast_div {
+    flex: 1; /* Take up as much space as needed */
+    z-index: 2; /* Ensure it stays above the overlay */
+    color: #716d6d; /* Light gray text color for readability */
+}
+
+.donate_mast_div h1 {
+    color: #F9CC10;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-top: -120px;
+    margin-left: 150px;
+}
+
+.donate_mast_div p {
+    color: white;
+    margin-left: 150px;
+    font-size: 30px;
+    margin-top: -30px;
+    line-height: 1.3;
+}
+
+.donate_over_top {
+    position: absolute; /* Overlay it on top of the masthead */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the image horizontally */
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Ensure it is above the overlay */
+    opacity: 1; /* Add slight transparency */
+}
+
+.donate_over_top img {
+    width: 100%; /* Ensure the image spans the width */
+    height: 100%; /* Stretch to cover the height */
+    object-fit: cover; /* Maintain the aspect ratio */
+    filter: brightness(100%);
+}
+
+/* Hide the over_top image on smaller screens */
+@media (max-width: 768px) {
+    .donate_over_top {
+        display: none; /* Completely hide the over_top image */
+    }
+
+    .donate_mast_div {
+        text-align: center;
+    }
+
+    .donate_mast_div h1 {
+        font-size: 2.3rem; /* Reduce font size */
+        margin: 0 auto;
+    }
+
+    .donate_mast_div p {
+        font-size: 1.3rem; /* Reduce font size */
+        margin: 15px auto;
+    }
+
+    .donate_masthead {
+        height: 40vh; /* Let height adjust dynamically */
+    }
+}
+
+
+.donate_btn {
+    display: inline-block;
+    padding: 17px 35px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    background-color: #F9CC10;
+    color: #9605C6;
+    margin-left: 10%;
+}
+
+
+.impact-section {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.impact-section h1 {
+    color: #9605C6; /* Purple color */
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.impact-section h2 {
+    color: #9605C6;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.impact-section p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .impact-section {
+        width: 90%;
+    }
+
+    .impact-section h1 {
+        font-size: 36px;
+    }
+
+    .impact-section h2 {
+        font-size: 20px;
+    }
+}
+
+/* Donation Section Styling */
+.donation-section {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.donation-message {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Heading Styling */
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.percentage {
+    color: #9605C6; /* Purple color */
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.goal-text {
+    color: #560309; /* Dark Red */
+    font-weight: bold;
+    font-size: 35px;
+}
+
+/* Progress Bar Container */
+.progress-bar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+    width: 50%;
+    height: 60px;
+    background: #848484;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* Progress Fill (Yellow Section) */
+.progress-fill {
+    width: 60%;
+    height: 100%;
+    background: #F9CC10;
+    border-radius: 15px 0 0 15px;
+}
+
+/* Donation Details */
+.donation-details {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    margin: 0 auto;
+}
+
+.donation-details p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Footer Message */
+.donation-footer {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .donation-section {
+        width: 90%;
+    }
+
+    .progress-bar {
+        width: 80%;
+    }
+
+    .donation-details {
+        width: 80%;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+.support-section {
+    background: url('/img/donate-story 1.png') no-repeat center center;
+    background-size: cover;
+    margin-left: 20%;
+    color: #9605C6;
+}
+
+.support-section h1 {
+    font-size: 46px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.support-section p {
+    font-size: 16px;
+    max-width: 600px;
+    color: #333;
+}
+
+.quote-author {
+    font-weight: bold;
+    color: #9605C6;
+}
+
+.donate_btn2 {
+    margin-top: 5%;
+    display: inline-block;
+    padding: 17px 35px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    background-color: #F9CC10;
+    color: #9605C6;
+}
+
+
+@media (max-width: 768px) {
+    .support-section {
+        background: none; /* Removes the background image */
+        text-align: center;
+        margin: 0;
+        padding: 5%;
+    }
+
+    .support-section h1 {
+        font-size: 32px;
+    }
+
+    .support-section p {
+        font-size: 14px;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .donate_btn2 {
+        padding: 12px 28px;
+        font-size: 0.85rem;
+    }
+}
+
+
+.donation-section {
+    text-align: center;
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.donation-section h1 {
+    font-size: 46px;
+    font-weight: bold;
+    color: #9605C6;
+}
+
+.donation-section p {
+    font-size: 16px;
+    color: #333;
+}
+
+.donation-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    max-width: 100%;
+}
+
+.donation-image-container img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .donation-section {
+        padding: 20px;
+    }
+
+    .donation-section h1 {
+        font-size: 28px;
+    }
+
+    .donation-section p {
+        font-size: 14px;
+    }
+}
+
+.donation-form {
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hh4{
+    color: #9605C6;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Amount Selection */
+.donation-amount-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #D9D9D9;
+    padding: 70px;
+    margin-bottom: 20px;
+}
+
+.amount-options {
+    text-align: center;
+}
+
+.amount-options span {
+    font-size: 16px;
+}
+
+.amount-buttons {
+    margin-top: 25px;
+}
+
+.amount-buttons button {
+    background: #D9D9D9;
+    border: 1px solid black;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.amount-buttons button:hover {
+    background: #969090;
+    color: black;
+    font-weight: bold;
+}
+
+.or-text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.custom-amount {
+    text-align: center;
+    color: #848484;
+}
+
+.custom-amount input {
+    border: none;
+    background-color: #D9D9D9;
+    font-size: 14px;
+    margin-top: 5%;
+}
+
+/* Address & Email Section */
+.donation-info {
+    display: flex;
+    background: #9605C6;
+    color: white;
+    margin-top: -20px;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.address-section, .email-section {
+    width: 45%;
+}
+
+.donation-info h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white;
+    margin-left: 31%;
+    font-weight: bold;
+}
+
+.donation-info span {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: normal;
+}
+
+.email-section h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white;
+    margin-left: -1%;
+    font-weight: bold;
+}
+
+.email-section span {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: normal;
+}
+
+.location-inputs3, .location-inputs4 {
+    width: 60%;
+    padding: 15px;
+    margin-left: 31%;
+    border: none;
+    color: #333;
+    background-color: #D9D9D9;
+    margin-bottom: 15px;
+}
+.email-section input{
+    width: 60%;
+    padding: 15px;
+    border: none;
+    color: #333;
+    margin-left: -1%;
+    background-color: #D9D9D9;
+    margin-bottom: 15px;
+}
+
+.location-inputs {
+    display: flex;
+}
+
+
+.location-inputs1{
+    width: 60%;
+    margin-right: 10px;
+    padding: 15px;
+    margin-left: 31%;
+    border: none;
+    color: #333;
+    background-color: #D9D9D9;
+    margin-bottom: 15px;
+}
+
+.location-inputs2{
+    width: 15%;
+    margin-left: -1%;
+    padding: 15px;
+    border: none;
+    color: #333;
+    background-color: #D9D9D9;
+    margin-bottom: 15px;
+}
+
+.add-detail-btn{
+    width: 40%;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 25px;
+    background: #D9D9D9;
+    color: #333333;
+    float: right;
+}
+
+.submit-btn{
+    width: 40%;
+    padding: 17px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 13%;
+    background: #D9D9D9;
+    color: #333333;
+}
+
+.submit-btn {
+    background: #F9CC10;
+    color: #9605C6;
+}
+
+.security-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.security-info img {
+    width: 90px;
+    margin-left: -15px;
+}
+
+.security-info p {
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .donation-amount-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .custom-amount input{
+        margin-left: 60px;
+        margin-top: -1px;
+    }
+
+    .or-text{
+        margin: 10px 0;
+    }
+
+    .donation-info {
+        flex-direction: column;
+        margin-top: -20px;
+        text-align: center;
+    }
+
+    .address-section h4{
+        margin: 10px 0;
+    }
+
+    .address-section input{
+        text-align: center;
+        margin-left: -1px;
+    }
+
+    .location-inputs2{
+        width: 38%;
+    }
+
+    .add-detail-btn{
+        float: none;
+    }
+
+    .address-section, .email-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+}
+
+
+
+
+
+.footer-section {
+    background-color: #9605C6;
+    color: white;
+    padding: 55px 20px;
+    font-family: Arial, sans-serif;
+    margin-top: 4%;
+}
+#f_logo{
+    height: 120px;
+    width: auto;
+    margin-left: -180px;
+    margin-top: -20px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-left, .footer-middle, .footer-right {
+    width: 30%;
+    padding-bottom: 50px;
+}
+
+.footer-left p {
+    line-height: 1.6;
+}
+
+.footer-middle h2 {
+    color: white;
+    font-size: 2rem;
+}
+
+.footer-middle h4 {
+    color: #F9CC10;
+    margin-bottom: 10px;
+}
+
+.footer-middle h5 {
+    margin-bottom: 5px;
+}
+
+.footer-right .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-right .social-icons img {
+    width: 70px;
+    height: 67px;
+}
+
+.footer-right .search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-right .search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    margin-left: -1px;
+}
+
+.footer-right .search-bar button {
+    background-color: #F9CC10;
+    border: none;
+    padding: 9px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.footer-right p {
+    line-height: 1.5;
+}
+
+hr {
+    border: 1px solid white;
+    margin: 20px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-bottom h5 {
+    margin: 0;
+}
+
+.menu2 {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+
+.menu2 li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu2 li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+    .footer-container {
+        gap: 20px;
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        flex: 1 1 45%; /* Allow two sections per row */
+        text-align: center; /* Center-align content for smaller screens */
+    }
+
+    .footer-middle h2 {
+        font-size: 1.8rem;
+    }
+
+    .footer-middle h4,
+    .footer-middle h5 {
+        font-size: 1rem;
+    }
+
+    .footer-right .social-icons img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-right .search-bar input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .footer-right .search-bar button {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .footer-bottom h5 {
+        font-size: 0.8rem;
+    }
+
+    .menu2 {
+        gap: 10px;
+    }
+}
+
+/* For screens 900px and smaller */
+@media (max-width: 900px) {
+    .footer-container {
+        flex-wrap: wrap; /* Allow wrapping of sections */
+        gap: 20px; /* Reduce gap between sections */
+        overflow: hidden;
+    }
+
+    #f_logo {
+        margin: 0 auto; /* Center the logo */
+        display: block; /* Ensure block display for alignment */
+    }
+
+    .description {
+        margin-top: 70px;
+    }
+
+    .footer-right .social-icons img {
+        width: 60px;
+        height: 60px; /* Scale down social icons */
+        text-align: center;
+    }
+
+    .footer-right .social-icons {
+        justify-content: center;
+    }
+
+    .footer-right .search-bar input {
+        padding: 8px; /* Adjust input padding */
+    }
+
+    .footer-right .search-bar button {
+        padding: 8px; /* Adjust button padding */
+    }
+
+    .footer-bottom {
+        flex-wrap: wrap; /* Allow wrapping */
+        text-align: center; /* Center-align content */
+    }
+
+    .menu2 {
+        gap: 10px; /* Reduce gap between menu items */
+    }
+
+    #number{
+        margin: 0 auto;
+    }
+}
+
+/* For screens 768px and smaller */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack all sections vertically */
+        text-align: center; /* Center-align all content */
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        width: 95%; /* Full width for sections */
+    }
+
+    #f_logo {
+        margin: 0 auto; /* Center the logo */
+        display: block; /* Ensure block display */
+    }
+
+    .description {
+        margin-top: 70px;
+    }
+
+    .footer-right .social-icons {
+        justify-content: center;
+        flex-wrap: wrap; /* Allow icons to wrap if needed */
+    }
+
+    .footer-right .search-bar {
+        flex-direction: column; /* Stack search input and button */
+        align-items: center; /* Center-align search bar */
+    }
+
+    .footer-right .search-bar input,
+    .footer-right .search-bar button {
+        width: 60%; /* Set consistent width for input and button */
+        margin-bottom: 10px; /* Add spacing between input and button */
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        display: inline-block;
+        margin-left: 0; /* Center footer bottom content */
+        text-align: center;
+    }
+
+    .footer-bottom .menu2 {
+        gap: 10px;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    #number{
+        margin: 0 auto;
+    }
+}

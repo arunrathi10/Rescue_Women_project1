@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="head">
+    <title>Rescue Women</title>
+    <!-- calling our js file -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+
+    <section class="contact_masthead">
+        <div class="contact_mast_div">
+            <h1>Contact Us</h1>
+            <p>For more information about our services,<br>To get involved, or to make a donation</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="contact-section">
+            <div class="contact-container">
+                <!-- Left Column -->
+                <div class="contact-left">
+                    <h2>Get In Touch</h2>
+                    <p>
+                        Together, we can create a world where every woman lives
+                        free from violence and abuse.
+                    </p>
+
+                    <!-- Contact Items (Icons + Labels) -->
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <!-- You can replace with an <img> or <svg> for the actual icon -->
+                                <img src="img/contact_googlemap.png" alt="Pin" />
+                            </div>
+                            <span class="contact-label">Head Office</span>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <img src="img/contact_email.png" alt="Email" />
+                            </div>
+                            <span class="contact-label">Email Us</span>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <img src="img/contact_phone.png" alt="Phone" />
+                            </div>
+                            <span class="contact-label">Call Us<br>(123) 456-7890</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column (Image) -->
+                <div class="contact-right">
+                    <img src="img/contact_map.png" alt="Map location" />
+                </div>
+            </div>
+        </section>
+
+        <section class="contact_form">
+            <div class="contact-form-container2">
+                <h1>Send Us a Message</h1>
+                <p>Together, we can create a world where every woman lives free from violence and abuse.</p>
+
+                <form action="#" method="POST">
+                    <div class="two-column">
+                        <!-- NAME -->
+                        <div class="form-field">
+                            <label for="name">NAME</label>
+                            <input type="text" id="name" name="name" placeholder="Name" required />
+                        </div>
+
+                        <!-- COMPANY -->
+                        <div class="form-field">
+                            <label for="company">COMPANY</label>
+                            <input type="text" id="company" name="company" placeholder="Company" />
+                        </div>
+
+                        <!-- PHONE -->
+                        <div class="form-field">
+                            <label for="phone">PHONE</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Phone" />
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="form-field">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email" placeholder="Email" required />
+                        </div>
+                    </div>
+
+                    <!-- SUBJECT -->
+                    <div class="form-field">
+                        <label for="subject">SUBJECT</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" />
+                    </div>
+
+                    <!-- MESSAGE -->
+                    <div class="form-field">
+                        <label for="message">MESSAGE</label><br>
+                        <textarea id="message" name="message" placeholder="Message"></textarea>
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <button type="submit" class="submit-button">SEND MESSAGE</button>
+                </form>
+            </div>
+        </section>
+
+        <div class="contact_social-icons">
+            <h2>Follow Us on Social Media</h2>
+            <a href="#" target="_blank">
+                <img src="img/contact_twitter.png" alt="Twitter" />
+            </a>
+            <a href="#" target="_blank">
+                <img src="img/contact_tiktok.png" alt="TikTok" />
+            </a>
+            <a href="#" target="_blank">
+                <img src="img/contact_facebook.png" alt="Facebook" />
+            </a>
+        </div>
+    </main>
+
+    <footer id="footer"></footer>
+</body>
+</html>
